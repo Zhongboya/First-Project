@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.li {
+				list-style: none;
+				height: 50px;
+				line-height: 50px;
+				width: 100px;
+				background-color: lightblue;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			var ul = document.createElement("ul") //创建ul标签
+			for (var i = 0; i < 3; i++) {
+				var lis = document.createElement("li") //循环创建li标签
+				var text = document.createTextNode("第" + (i + 1) + "个li元素") //创建文本内容
+				lis.appendChild(text) //给li元素中添加文本内容
+				lis.className = "li"; //给li添加类名
+				ul.appendChild(lis) //给ul标签中添加li元素
+			}
+			document.body.appendChild(ul) //将准备好的ul添加到body里面去
+			var zhushi=document.createComment("创建注释")//创建注释节点
+			document.body.insertBefore(zhushi,ul);//将注释添加到ul前面去
+		</script>
+	</body>
+</html>
